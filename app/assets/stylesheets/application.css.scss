@@ -13,3 +13,48 @@
  *= require_tree .
  *= require_self
  */
+
+.label:first-of-type {
+  margin-left: 0;
+}
+
+.label {
+  color: #fff;
+  margin-left: 5px;
+
+  a {
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
+
+.label-black {
+  background-color: black;
+}
+
+.label-purple {
+  background-color: purple;
+}
+
+.label-green {
+  background-color: green;
+}
+
+.label-white {
+  color: #000;
+  background-color: white;
+
+  a {
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+      color: #000;
+    }
+  }
+}

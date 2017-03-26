@@ -20,4 +20,8 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  labels:
+    created: 'Your label has been created!'
+    deleted: 'The label has been deleted!'
+    errors:
+      unique: 'No two labels associated to one user can have the same name and colour.'

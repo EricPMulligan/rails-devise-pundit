@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 20170326195339) do
 
   create_table "labels", force: :cascade do |t|
-    t.integer  "user_id"
+    t.integer  "user_id",    null: false
     t.string   "name",       null: false
     t.string   "colour",     null: false
     t.datetime "created_at", null: false

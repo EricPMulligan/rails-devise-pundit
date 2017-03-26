@@ -2,8 +2,10 @@ class UsersController < ApplicationController
   before_action :authenticate_user!
   after_action :verify_authorized
 
+  rescue_from Pundit::NotAuthorizedError, with: :rescue_from_not_authorized
+
   def index
-    @users = User.all
+    @users = User.includes(:labels)
     authorize User
   end
 
@@ -30,6 +32,10 @@ class UsersController < ApplicationController
   end
 
   private
+
+  def rescue_from_not_authorized
+    redirect_to root_path, alert: 'Access denied.'
+  end
 
   def secure_params
     params.require(:user).permit(:role)

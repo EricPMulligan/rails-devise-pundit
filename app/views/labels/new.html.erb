@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="page-header">
+    <h1>New Label</h1>
+  </div>
+
+  <%= form_for @label, url: user_labels_path(@label.user.id) do |f| %>
+    <div class="form-group">
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control', required: true %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :colour %>
+      <%= f.select(:colour, [%w(Black black), %w(Purple purple), %w(Green green), %w(White white)], { include_blank: true }, class: 'form-control') %>
+    </div>
+
+    <%= f.submit 'Create Label', class: 'btn btn-primary' %>
+  <% end %>
+</div>
