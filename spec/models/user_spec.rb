@@ -4,6 +4,8 @@ describe User do
 
   subject { @user }
 
+  it { is_expected.to have_many :labels }
+
   it { should respond_to(:email) }
 
   it "#email returns a string" do
