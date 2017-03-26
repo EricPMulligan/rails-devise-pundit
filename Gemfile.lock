@@ -120,6 +120,7 @@ GEM
     nokogiri (1.6.8.1)
       mini_portile2 (~> 2.1.0)
     orm_adapter (0.5.0)
+    pg (0.19.0)
     puma (3.6.0)
     pundit (1.1.0)
       activesupport (>= 3.0.0)
@@ -242,6 +243,7 @@ DEPENDENCIES
   jquery-rails
   launchy
   listen (~> 3.0.5)
+  pg
   puma (~> 3.0)
   pundit
   rails (~> 5.0.0, >= 5.0.0.1)
@@ -262,4 +264,4 @@ RUBY VERSION
    ruby 2.3.1p112
 
 BUNDLED WITH
-   1.13.2
+   1.13.6
